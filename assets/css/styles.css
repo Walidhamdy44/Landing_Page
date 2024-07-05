@@ -1,0 +1,254 @@
+/* Global Styles .. */
+a {
+  text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: relative;
+  z-index: 10;
+  background-color: #282828;
+}
+
+#side-menu {
+  position: fixed;
+  top: 0;
+  left: -105%;
+  width: 400px;
+  height: 100%;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+#side-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+#side-menu .menu-category {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+#side-menu .menu-category i {
+  float: right;
+}
+
+#side-menu .close-btn {
+  position: absolute;
+  top: 10px;
+  left: -50px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#menu-button {
+  cursor: pointer;
+}
+
+.cart-count {
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 17px;
+  height: 17px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu-button i {
+  font-size: 24px;
+}
+
+/* Media queries for tablet and phone */
+@media (max-width: 1024px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  #logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+}
+
+/* start Hero .. */
+
+.swiper {
+  cursor: grab;
+}
+.swiper-slide {
+  height: 100vh;
+}
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  width: 70px;
+  height: 4px;
+  border-radius: 0;
+  transition: 0.4s;
+}
+.swiper-pagination-bullet:hover {
+  background-color: rgb(161, 222, 222);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(173, 220, 220);
+}
+.slid1 {
+  background-image: url("../imgs/heritage-lp-3.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slid2 {
+  background-image: url("../imgs/jump2-desktop.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slid3 {
+  background-image: url("../imgs/mk-lp-tile-1.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slid4 {
+  background-image: url("../imgs/sage1-mobile.webp"),
+    url("../imgs/sage2-desktop.webp");
+  background-position: center, center;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+}
+@media (max-width: 767px) {
+  .slid4 {
+    background-image: url("../imgs/sage1-mobile.webp");
+  }
+}
+
+.slid5 {
+  background-image: url("../imgs/tom-dixon-lp-tile-1.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn {
+  background-color: #f3ff34;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding: 15px 20px;
+  text-align: center;
+  width: 190px;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+  font-weight: bold;
+}
+.btn:hover {
+  background-color: rgb(204, 211, 19);
+}
+
+@media (max-width: 767px) {
+  .btn {
+    padding: 10px 15px;
+    width: fit-content;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+@media (max-width: 767px) {
+  .swiper {
+    height: 700px;
+  }
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* animation  in the header*/
+ul:first-of-type li {
+  position: relative;
+  display: inline-block;
+}
+
+ul:first-of-type li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+ul:first-of-type li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+ul:first-of-type li a:hover::after {
+  visibility: visible;
+  width: 100%;
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Landing Page" />
+    <!-- Swiper Libarary > -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Home Page</title>
+  </head>
+  <body style="min-height: 100vh">
+    <header
+      class="flex items-center p-6 h-[80px] bg-[#282828] text-white fixed w-full"
+    >
+      <nav class="flex items-center justify-between w-full px-3 relative">
+        <!-- Hamburger menu button for mobile -->
+        <div class="mobile-menu flex items-center lg:hidden">
+          <button id="menu-button" class="text-white">
+            <i class="fas fa-bars"></i>
+          </button>
+          <i class="fas fa-search ml-4"></i>
+        </div>
+        <div id="logo">
+          <img
+            src="./assets/imgs/logo-focal_200x.png"
+            alt="logo Focal"
+            class="max-w-[100px]"
+          />
+        </div>
+        <div class="mobile-menu block lg:hidden">
+          <a href="#" class="flex items-center cart relative">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </a>
+        </div>
+        <!-- Desktop menu -->
+        <div class="desktop-menu items-center gap-5 hidden lg:flex">
+          <ul class="flex items-center gap-5">
+            <li><a href="#">Shop by Category</a></li>
+            <li><a href="#">Shop by Device</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+          <div class="flex items-center gap-2 cursor-pointer">
+            <a href="#">United State (USD$)</a>
+            <i class="fas fa-chevron-down text-[16px]"></i>
+          </div>
+          <ul class="flex items-center gap-5 lg:ml-[30px]">
+            <li>
+              <a href="#" class="flex items-center">
+                <i class="far fa-envelope text-[24px]"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center">
+                <i class="fas fa-search text-[20px]"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center">
+                <i class="fas fa-user text-[19px]"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center cart relative">
+                <i class="fas fa-shopping-cart text-[18px]"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Side Menu -->
+    <div
+      id="side-menu"
+      class="mt-[80px] flex flex-col justify-between z-[100000]"
+    >
+      <div>
+        <a href="javascript:void(0)" class="close-btn" id="close-btn"
+          >&times;</a
+        >
+        <div class="menu-category">
+          SHOP BY CATEGORY <i class="fas fa-plus"></i>
+        </div>
+        <div class="menu-category">
+          SHOP BY DEVICE <i class="fas fa-plus"></i>
+        </div>
+        <div class="menu-category">COLLECTIONS <i class="fas fa-plus"></i></div>
+        <div class="menu-category">MORE <i class="fas fa-plus"></i></div>
+      </div>
+      <div class="menu-category mb-4">
+        <a href="#">Account <i class="fas fa-user"></i></a>
+      </div>
+    </div>
+
+    <!-- start Hero Section -->
+    <!-- Slider main container -->
+    <div class="swiper mb-[30px]">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide slid1 relative">
+          <div
+            class="box box1 flex flex-col items-start absolute left-[50px] top-[40%]"
+          >
+            <h1
+              class="text-white text-center text-[18px] max-sm:mb-[20px] md:text-[30px]"
+            >
+              Discover the Future
+            </h1>
+            <p
+              class="text-white text-center text-[30px] md:text-[60px] md:mb-[-20px] font-extrabold"
+            >
+              THE HERITAGE
+            </p>
+            <p
+              class="text-white text-[30px] text-center md:text-[60px] font-extrabold"
+            >
+              COLLECTIONS
+            </p>
+            <div class="flex items-center gap-5 mt-4">
+              <a href="#" class="btn">DISCOVER NOW</a>
+              <a href="#" class="btn">SHOP</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slid2">
+          <div
+            class="box box1 flex flex-col items-center justify-center top-[33%] left-[22%] absolute md:left-[34%] md:top-[38%]"
+          >
+            <h1 class="text-white text-center md:text-[20px]">MEET THE</h1>
+            <p
+              class="text-white text-center text-[30px] md:text-[60px] md:mb-[-20px] font-extrabold"
+            >
+              SAGA
+            </p>
+            <p
+              class="text-white text-center text-[30px] md:text-[60px] font-extrabold"
+            >
+              COLLECTIONS
+            </p>
+            <div class="flex items-center gap-5 mt-4">
+              <a href="#" class="btn">SHOP JUMP+</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slid3">
+          <div
+            class="box box1 flex flex-col items-start absolute left-[50px] top-[36%]"
+          >
+            <h1 class="text-white text-center md:text-[20px]">NEW IN</h1>
+            <p
+              class="text-white text-center text-[30px] md:text-[60px] md:mb-[-20px] font-extrabold"
+            >
+              THE MISION
+            </p>
+            <p
+              class="text-white text-center md:text-[60px] text-[30px] font-extrabold md:mb-[-20px]"
+            >
+              COTSINE
+            </p>
+            <p
+              class="text-white text-center text-[30px] md:text-[60px] font-extrabold"
+            >
+              COLLAPS
+            </p>
+            <div class="flex items-center gap-5 mt-4">
+              <a href="#" class="btn">LEARN MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slid4">
+          <div
+            class="box box1 flex flex-col items-center justify-center absolute top-[36%] left-[20%] md:left-[34%] md:top-[38%]"
+          >
+            <h1 class="text-white text-center md:text-[20px]">
+              CHARGE ANY WHARE ANY TIME
+            </h1>
+            <p
+              class="text-white text-center text-[30px] md:text-[60px] md:mb-[-20px] font-extrabold"
+            >
+              NEW JUMP+
+            </p>
+            <p class="text-white text-center md:text-[60px] font-extrabold">
+              POWERBANK
+            </p>
+            <div class="flex items-center gap-5 mt-4">
+              <a href="#" class="btn">SHOP JUMP+</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slid5">
+          <div
+            class="box box1 flex flex-col items-start absolute left-[50px] top-[36%]"
+          >
+            <h1 class="text-white text-center md:text-[20px]">
+              NEW COLLECTIONS
+            </h1>
+            <p
+              class="text-white text-center text-[30px] md:text-[60px] md:mb-[-20px] font-extrabold"
+            >
+              NITIVE UNION
+            </p>
+            <p
+              class="text-white text-center md:text-[60px] text-[30px] font-extrabold md:mb-[-20px]"
+            >
+              XTOM RADIOM
+            </p>
+            <div class="flex items-center gap-5 mt-4">
+              <a href="#" class="btn">LEARN MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- scripts -->
+    <script
+      src="https://kit.fontawesome.com/383a13c6a3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
